@@ -1,86 +1,49 @@
-# Aplicación de Ordenamiento de Datos de API
+# Data Sorting Application
 
-Esta aplicación permite consumir datos de una API, visualizarlos y ordenarlos utilizando diferentes algoritmos de ordenamiento.
+This project fetches data from an external API, processes it, and allows users to sort it based on a selected numerical variable using different sorting algorithms.
 
-## Características
+## Installation
 
-- Consumo de datos de API (por defecto, CoinGecko para datos de criptomonedas)
-- Visualización de datos en una tabla
-- Selección de variables numéricas para ordenar
-- Implementación de tres algoritmos de ordenamiento:
-  - Burbuja
-  - Selección
-  - Inserción
-- Ordenamiento ascendente o descendente
-- Visualización gráfica de los datos
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/Alejo-IA/ordenador_dataset.git
+   cd ordenador_dataset
+   ```
+2. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
 
-## Requisitos
+## Dependencies
 
-- Python 3.7+
-- Bibliotecas requeridas:
-  - requests
-  - pandas
-  - numpy
-  - matplotlib
-  - tkinter (incluido con Python)
-
-## Instalación
-
-1. Clonar este repositorio:
-```
-git clone https://github.com/tu-usuario/proyecto-ordenamiento-api.git
-cd proyecto-ordenamiento-api
+The project requires the following Python libraries:
+```txt
+requests==2.31.0
+numpy==1.26.4
+pandas==2.1.4
+matplotlib==3.8.3
+python-dotenv==1.0.1
 ```
 
-2. Instalar las dependencias:
-```
-pip install -r requirements.txt
-```
+## Usage
 
-## Uso
-
-1. Ejecutar la aplicación:
-```
+Run the main script:
+```sh
 python main.py
 ```
 
-2. En la interfaz:
-   - Hacer clic en "Cargar Datos de API" para obtener los datos
-   - Seleccionar la columna numérica para ordenar
-   - Elegir el algoritmo de ordenamiento
-   - Seleccionar ordenamiento ascendente o descendente
-   - Hacer clic en "Ordenar Datos" para aplicar el ordenamiento
+The application will retrieve data from the API and provide options to sort it based on user selection.
 
-## Estructura del Proyecto
+## API Used
 
-- `main.py`: Archivo principal de la aplicación
-- `api_handler.py`: Clase para consumir la API
-- `data_processor.py`: Clase para procesar y ordenar datos
-- `sorting_algorithms.py`: Implementación de algoritmos de ordenamiento
-- `ui_manager.py`: Gestión de la interfaz gráfica
+The application fetches cryptocurrency market data from CoinGecko:
+```
+https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1
+```
 
-## Implementación
+Ensure you have an active internet connection to fetch the latest data.
 
-La aplicación está desarrollada siguiendo principios de Programación Orientada a Objetos:
+## License
 
-- `APIHandler`: Encargada de consumir la API y obtener los datos
-- `SortingAlgorithms`: Implementa diversos algoritmos de ordenamiento
-- `DataProcessor`: Procesa y ordena los datos
-- `UIManager`: Gestiona la interfaz gráfica
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-## Explicación de los Algoritmos de Ordenamiento
-
-1. **Bubble Sort (Ordenamiento Burbuja)**:
-   - Compara cada par de elementos adyacentes
-   - Intercambia elementos si están en el orden incorrecto
-   - Complejidad: O(n²)
-
-2. **Selection Sort (Ordenamiento por Selección)**:
-   - Busca el elemento mínimo/máximo en cada iteración
-   - Lo coloca en su posición correcta
-   - Complejidad: O(n²)
-
-3. **Insertion Sort (Ordenamiento por Inserción)**:
-   - Construye una sublista ordenada elemento por elemento
-   - Inserta cada elemento en la posición correcta dentro de la sublista
-   - Complejidad: O(n²)
