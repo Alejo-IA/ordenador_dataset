@@ -47,3 +47,6 @@ Ensure you have an active internet connection to fetch the latest data.
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+```sh
+WARNING API KEY USE BRO. IDK 
+```
