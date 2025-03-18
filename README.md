@@ -1,3 +1,6 @@
+![View Counter](https://komarev.com/ghpvc/?username=Alejo-IA&color=blue)
+
+
 # Data Sorting Application
 
 This project fetches data from an external API, processes it, and allows users to sort it based on a selected numerical variable using different sorting algorithms.
